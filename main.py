@@ -1,4 +1,4 @@
-print("""---------------------------------------
+print("""{---------------------------------------}
 Hoş Geldiniz...
 
 1. Toplama İşlemi
@@ -10,12 +10,15 @@ Hoş Geldiniz...
 4. Bölme İşlemi
 
 5. Karekök Alma İşlemi
----------------------------------------""")
-işlem = input("iŞLEM NUMARASINI GİRİNİZ:")
+{---------------------------------------}""")
+
+işlem = input("Hoşgeldiniz İşleminizi Giriniz:".format(str))
+if (işlem >="6"):
+    print("Lütfen geçerli işlem yapın..")
+    quit()
 
 a = int(input("Birinci Sayı:"))
 b = int(input("ikinci Sayı:"))
-
 
 if (işlem == "1"):
     print("{} ile {} 'nin toplamı: {}".format(a,b,a+b))
@@ -28,6 +31,4 @@ elif (işlem == "4"):
 elif (işlem == "5"):
     print("{} ile {} 'nin karekökü: {}".format(a,b,a*a*b))
 
-else:
-    print("lütfen geçerli işlem yapınız.")
-    quit()
+quit()
